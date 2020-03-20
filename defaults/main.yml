@@ -1,0 +1,25 @@
+---
+# defaults file for ocp_quotas
+
+# Variable to define the SSL verify for Openshift API calls
+ocp_verify_ssl: true
+
+# Default Resource Quotas definition
+quotas:
+  medium:
+    hard:
+      requests.storage: "50Gi"
+      requests.cpu: "2"
+      requests.memory: 10Gi
+      limits.cpu: "20"
+      limits.memory: 24Gi
+  large:
+    hard:
+      requests.storage: "50Gi"
+      requests.cpu: "4"
+      requests.memory: 20Gi
+      limits.cpu: "40"
+      limits.memory: 48Gi
+
+# Default Resource Quotas Size
+quotas_size: "medium"
